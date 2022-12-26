@@ -6,10 +6,23 @@
 }
 body{
   background-color: #f2f2f2;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  min-height: 100vh;
 }
 /* nav*/
+.navbar{
+  margin: 0;
+  padding: 0;
+}
 .container-fluid{
+  display: flex;
   background-color: #FF676D;
+}
+.navbar-brand{
+  padding: 0;
+  margin: 0;
 }
 /* Carousel*/
 .carousel .slide{
@@ -20,43 +33,41 @@ body{
     width: 100%;
 }
 /* Modo Nocturno*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-
+.contenedor-boton{
+  display: flex;
   background-color: #FF676D;
-  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  align-items: center;
 }
 body.dark {
   background-color: #18191a;
+  color: #ad9898;
 }
 .toggle {
   position: relative;
-  height: 30px;
+  height: 50px;
   width: 60px;
-  border-radius: 80px;
-  background-color: #fff;
+  border-radius: 100px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  background-color: rgb(246, 250, 250);
 }
 .toggle::before {
   content: "";
   position: absolute;
   height: 30px;
-  width: 60px;
+  width: 20px;
   background: #FF676D;
-  border-radius: 80%;
+  border-radius: 100%;
   top: 50%;
-  left: 14px;
+  right: 10px;
   transform: translateY(-50%);
   transition: all 0.3s ease-in-out;
 }
 .toggle.active::before {
   background-color: #18191a;
-  left: calc(100% - 110px - 14px);
+  left: calc(100% - 40px - 10px);
 }
 
   /* whats app*/
@@ -74,26 +85,8 @@ body.dark {
     justify-content:center;
     align-items:center;
 }
-.container-titulos{
-  display: flex;
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 /*Slide Card*/
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-}
-body{
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background: #f2f2f2;
-  position: relative;
-}
 body::before{
   content: '';
   position: absolute;
@@ -118,6 +111,12 @@ body::before{
   transition: 2s;
 }
 #two:checked ~ .main-card{
+  margin-left: -100%;
+}
+#four:checked ~ .main-card{
+  margin-left: -100%;
+}
+#six:checked ~ .main-card{
   margin-left: -100%;
 }
 .container .main-card .cards{
@@ -153,20 +152,20 @@ body::before{
   padding: 3px;
   margin-bottom: 14px;
 }
-.card .content .img img{
+.card .content .img2 img{
   height: 100%;
   width: 100%;
   border: 3px solid #ffff;
   border-radius: 2%;
   object-fit: cover;
 }
-.card .content .name{
+.card .content .titulo{
   font-size: 20px;
   font-weight: 500;
 }
-.card .content .job{
+.card .content .descripcion{
   font-size: 20px;
-  color: #FF676D;
+
 }
 .card .content .media-icons{
   margin-top: 10px;
@@ -240,7 +239,6 @@ input[type="radio"]{
 
 /*footer*/
 footer{
-
   display: flex;
   flex-wrap: wrap;
   width: 100% ;
@@ -248,6 +246,8 @@ footer{
   justify-content: space-around;
   align-items: center;
   min-height: 15vh; 
+  max-height: 35vh;
+  background-color: #FF676D;
 }
 button{
   background-color: #cecac4;
@@ -262,7 +262,7 @@ button{
   color: rgb(0,119, 181);
   height: 25px; 
   width: 25px;
-  border-radius: 5px;
+  border-radius: 80px;
   align-items: center;
   justify-content: center;
 }
@@ -291,16 +291,6 @@ button{
 }
 a{
   text-decoration: none;
-}/*Footer*/
-footer{
-  background-color: #FF676D;
-  display: flex;
-  flex-wrap: wrap ;
-  width: 100%;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 15vh;
 }
 .mapafooter{
   width: 100%;
@@ -318,4 +308,12 @@ footer{
   height: 50px;
   width: 50px;
   margin: 5px;
+}
+/*Cards*/
+.container-card{
+  display: flex;
+  width: 100%;
+  border-top: 2px;
+  margin: 2px;
+  justify-content: space-around;
 }

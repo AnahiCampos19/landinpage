@@ -1,10 +1,10 @@
+const body= document.querySelector("body");
 function autor(){alert("Realizado por: Ana Campos. Desarrolladora FrontEnd y Tester QA. email: anahifcampos@gmail.com");}
-const btnDark= document.querySelector('#dark');
-btnSwitch.addEventListener('click', ()=> {
-    document.body.classList.toggle('dark');
-    btnSwitch.classList.toggle('active');
-});
-      const body = document.querySelector("body"),
+//const btnDark= document.querySelector('#dark');
+//btnSwitch.addEventListener('click', ()=> {
+//    document.body.classList.toggle('dark');
+//    btnSwitch.classList.toggle('active');
+//});
         toggle = document.querySelector(".toggle");
 
       let getMode = localStorage.getItem("mode");
